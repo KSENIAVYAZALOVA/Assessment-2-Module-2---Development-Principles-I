@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Serif:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/app.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container--top">
+      <img class="header__image" src="/images/logo.png" alt ="Company logo">
+      <a href="/" class="header__span--text">Dragoncove 3D</a>
+      <span class="header__span--icon" onclick="doMobileNav()">&#9776;</span>
+      </div>
+      <div class="header__container--bottom">
+        <nav class="header__navbar">
+        <ul class="header__navbar__menu">
+          <li class="header__navbar__item">
+            <a href="/" class="header__navbar__link">Home</a>
+          </li>
+          <li class="header__navbar__item">
+            <a href="/pages/about.html" class="header__navbar__link">About</a>
+          </li>
+          <li class="header__navbar__item">
+            <a href="/pages/products.html" class="header__navbar__link">Products</a>
+          </li>
+          <li class="header__navbar__item">
+            <a href="/pages/contact.html" class="header__navbar__link">Contact us</a>
+          </li>
+          <div class="header__navbar__buttons">
+            <li class="header__navbar__btn">
+              <a href="/pages/signin.html" class="header__navbar__button">Sign In</a>
+            </li>
+            <li class="header__navbar__btn">
+              <a href="/pages/cart.html" class="header__navbar__button">Shopping cart</a>
+            </li>
+          </div>
+          </ul>
+        </ul>
+      </nav>
+      </div>
+      
+    </header>
+
+
+      <div class="shopping-cart">
+      <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Quantity</label>
+        <label class="product-removal">Remove</label>
+        <label class="product-line-price">Total</label>
+      </div>
+
+      <div class="product">
+        <div class="product-image">
+          <img src="/images/greendragon.webp" style="width: 100%" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">Articulated Adult Autumn Dragon</div>
+          <p class="product-description">A Cinderwing3D design</p>
+        </div>
+        <div class="product-price">130.00</div>
+        <div class="product-quantity">
+          <input type="number" value="2" min="1" />
+        </div>
+        <div class="product-removal">
+          <button class="remove-product">Remove</button>
+        </div>
+        <div class="product-line-price">260.00</div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="/images/orangeserpent.webp" style="width: 100%" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">Baby Winged Feathered Serpent</div>
+          <p class="product-description">Designed by Cinderwing3D</p>
+        </div>
+        <div class="product-price">60.00</div>
+        <div class="product-quantity">
+          <input type="number" value="1" min="1" />
+        </div>
+        <div class="product-removal">
+          <button class="remove-product">Remove</button>
+        </div>
+        <div class="product-line-price">60.00</div>
+      </div>
+
+      <div class="totals">
+        <div class="totals-item">
+          <label>Subtotal</label>
+          <div class="totals-value" id="cart-subtotal">320</div>
+        </div>
+        <div class="totals-item">
+          <label>Tax (5%)</label>
+          <div class="totals-value" id="cart-tax">16</div>
+        </div>
+        <div class="totals-item">
+          <label>Shipping</label>
+          <div class="totals-value" id="cart-shipping">15.00</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>Grand Total</label>
+          <div class="totals-value" id="cart-total">351</div>
+        </div>
+      </div>
+
+      <button class="checkout">Checkout</button>
+    </div>
+    <footer class="footer__container">
+      <div class="footer__icons">
+        <a href="https://www.facebook.com/people/Dragoncove3d" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/dragoncove3d" class="fa fa-instagram"></a>
+      </div>
+      <address class="footer__address">
+        For more details, contact
+        <a href="mailto:dragoncove3d@gmail.com">Support</a>.
+      </address>
+
+      <span class="footer__text">&copy; 2023 Dragoncove 3D</p>
+    </footer>
+  
+  </body>
+</html>

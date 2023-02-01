@@ -1,0 +1,951 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+body {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main section {
+  margin-top: 1rem;
+}
+
+.header__span--text,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+a {
+  color: #000;
+}
+
+/*HEADER*/
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* padding: 0.5rem 0 0.5rem 0; */
+  border-bottom: solid 0.05rem grey;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+}
+
+.header__container--top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__container--top > * {
+  padding: 1rem;
+}
+.header__span--text {
+  font-size: 1.8rem;
+  text-align: center;
+  /* margin: 0.5em; */
+}
+
+.header__image {
+  width: 25%;
+  height: auto;
+  object-fit: fill;
+  /* margin: 0.5em; */
+}
+
+nav {
+  overflow: hidden;
+}
+
+/* Mobile Menu */
+.header__navbar__link {
+  text-decoration: none;
+  display: block;
+  padding: 0.8em 2em;
+}
+
+.header__navbar__buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.header__navbar__button {
+  padding: 0.8em 2em;
+  background-color: #04aa6d;
+  color: white;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: "IBM Plex Mono", monospace;
+  border: none;
+  min-width: 1em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.header__container--bottom {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  transition: 0.5s;
+}
+
+.header__navbar {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+}
+
+.header__navbar__menu {
+  white-space: nowrap;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.header__navbar__item {
+  line-height: 1.2;
+  border-bottom: solid 0.05rem grey;
+  width: 100%;
+  text-align: center;
+}
+
+.header__navbar__link {
+  display: block;
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: bolder;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.header__span--icon {
+  cursor: pointer;
+  line-height: 1;
+  /* margin: 0.5em; */
+  font-size: 1.5em;
+}
+
+/* HERO SECTION */
+.hero__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__title {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 1rem 0 1rem;
+  font-weight: 900;
+}
+
+.hero__subtitle {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+}
+
+.hero__text--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button--accent,
+.button--secondary {
+  align-self: center;
+  width: auto;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* SERVICES SECTION */
+.services__container {
+  margin-top: 1rem;
+  background-color: rgb(215, 215, 215);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.services__title {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 1rem 0 1rem;
+  font-weight: 900;
+}
+
+.services__subtitle {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+}
+
+.services__list {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+}
+
+/* ABOUT SECTION */
+.about__container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.about__text--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__title {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 1rem 0 1rem;
+  font-weight: 900;
+}
+
+.about__subtitle {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+}
+
+/* ACTION BANNER */
+.action__container {
+  background-color: #1f986c;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.action__button {
+  width: auto;
+  align-self: center;
+  background-color: white;
+  color: #000;
+}
+
+.action__title {
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0 1rem 0 1rem;
+  font-weight: 900;
+}
+
+.action__text {
+  padding: 0 1rem 0 1rem;
+}
+
+.action__input {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.action__input__container {
+  display: flex;
+}
+
+/* BANNER SECTION */
+#banner {
+  position: relative;
+  width: 100%;
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+}
+
+#banner button {
+  position: absolute;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*  FOOTER  */
+.footer__container {
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+}
+
+.fa {
+  padding: 0.6rem;
+  font-size: 5em;
+  width: 2rem;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.fa:hover {
+  opacity: 1;
+}
+
+.fa-facebook,
+.fa-instagram {
+  background: white;
+  color: #04aa6d;
+}
+
+.footer__address a {
+  color: white;
+}
+
+.footer__container > * {
+  margin-bottom: 1rem;
+}
+
+/*  PRODUCTS PAGE */
+.products__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.column,
+input[type="submit"] {
+  width: 100%;
+  margin-top: 0;
+}
+
+.column,
+input[type="submit"] {
+  width: 100%;
+  margin-top: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+span.psw {
+  display: block;
+  float: none;
+}
+.cancelbtn {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  /* left: 80px; */
+  top: 2px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 80px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.cancelbtn,
+.signupbtn {
+  right: 100px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 1rem;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: -webkit-fill-available;
+  margin: 1rem;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Global "table" column settings */
+.product-image {
+  float: left;
+  width: 20%;
+}
+.product-details {
+  float: left;
+  width: 37%;
+}
+.product-price {
+  float: left;
+  width: 12%;
+}
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+.product-removal {
+  float: left;
+  width: 9%;
+}
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+.shopping-cart,
+.column-labels,
+.product,
+.totals-item {
+}
+
+/* Apply dollar signs */
+.product .product-price:before,
+.product .product-line-price:before,
+.totals-value:before {
+  content: "$";
+}
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: #aaa;
+}
+
+.shopping-cart {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column headers */
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product-image {
+  text-align: center;
+}
+.product-image img {
+  width: 100px;
+}
+
+.product-title {
+  margin-right: 20px;
+  font-weight: 100;
+}
+.product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+
+.product-quantity input {
+  width: 40px;
+}
+
+.remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-weight: 70;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.remove-product:hover {
+  background-color: #a44;
+}
+
+/* Totals section */
+.totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+
+.totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+
+.totals-item-total {
+  font-weight: 70;
+}
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+
+.checkout:hover {
+  background-color: #494;
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .column-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: "x";
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+
+  .totals-item label {
+    width: 60%;
+  }
+
+  .totals-value {
+    width: 40%;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1200px) {
+  .header {
+    flex-direction: row;
+    padding: 0 1rem 0 1rem;
+  }
+  .header__container--top {
+    justify-content: flex-start;
+  }
+  .header__container--bottom {
+    display: inline-block;
+    height: auto;
+  }
+
+  .header__span--icon {
+    display: none;
+  }
+
+  .header__image {
+    width: 15%;
+  }
+
+  .header__navbar__menu {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .header__navbar__link {
+    display: inline-block;
+    font-size: 1em;
+    padding: 0 2rem 0 0;
+  }
+
+  .header__navbar__link:hover {
+    color: #04aa6d;
+  }
+
+  .header__navbar__button {
+    font-size: 1em;
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+
+  .header__navbar__buttons {
+    flex-direction: row;
+    margin-top: 0;
+    align-self: flex-end;
+  }
+
+  .header__navbar__item {
+    border-bottom: 0;
+  }
+
+  .hero__container {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .services__container {
+    align-items: center;
+  }
+
+  .about__container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .about__text--right {
+    flex-direction: column;
+  }
+
+  .action__container {
+    align-items: center;
+  }
+
+  img.avatar {
+    width: 20%;
+  }
+}
